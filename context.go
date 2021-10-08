@@ -22,7 +22,7 @@ func WithError(ctx context.Context, err error) context.Context {
 func ErrorFromContext(ctx context.Context) error {
 	err, ok := ctx.Value(errorKey).(error)
 	if !ok {
-		return fmt.Errorf("Context missing error value")
+		return fmt.Errorf("context missing error value")
 	}
 	return err
 }
